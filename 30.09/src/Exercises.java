@@ -18,5 +18,14 @@ public class Exercises {
         System.out.println(" ");
         System.out.println("In a nutshell\n" + numberOne + "\n" + numberTwo + "\n" + stringTwo);
 
+        // Ex5
+        int daysInYear = 365;
+        int minutesInDay = 60 * 24;
+        int secondsInDay = minutesInDay * 60;
+        int secondsInYear = daysInYear * secondsInDay;
+
+        System.out.println("There are " + secondsInYear + " seconds in a year.");
+
+
     }
 }
