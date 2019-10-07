@@ -10,8 +10,8 @@ public class Exercises {
         System.out.print("Type another number: ");
         int number2 = Integer.parseInt(reader.nextLine());
 
-        int theSum = number1 + number2;
+        double theSum = (double)number1 / number2;
 
-        System.out.println("Sum of the numbers: " + theSum);
+        System.out.println("Division: " + number1 + " / " + number2 + " = " + theSum);
     }
 }
