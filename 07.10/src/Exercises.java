@@ -2,16 +2,12 @@ import java.util.Scanner;
 
 public class Exercises {
     public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
-        // Ex9
-        System.out.print("Type a number: ");
-        int number1 = Integer.parseInt(reader.nextLine());
-
-        System.out.print("Type another number: ");
-        int number2 = Integer.parseInt(reader.nextLine());
-
-        double theSum = (double)number1 / number2;
-
-        System.out.println("Division: " + number1 + " / " + number2 + " = " + theSum);
+        int radius;
+        double circumference;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the radius of the circle: ");
+        radius = sc.nextInt();
+        circumference = Math.PI*2*radius;
+        System.out.println("Circumference of the circle is: " + circumference);
     }
 }
