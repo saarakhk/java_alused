@@ -7,7 +7,6 @@ public class Exercises {
 
         System.out.println(numberOne + " + " + numberTwo + " = " + sum);
 
-     // Ex7
         int numberThree = 3;
         int numberFour = 4;
         int sum2 = numberThree + numberFour;
