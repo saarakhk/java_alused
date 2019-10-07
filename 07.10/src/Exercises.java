@@ -1,13 +1,17 @@
 import java.util.Scanner;
-import nhlstats.NHLStatistics;
 
 public class Exercises {
-        // Exercise 13: NHL statistics, part 1
-        public static void main(String[] args) throws Exception {
-            Scanner reader = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        // Exercise 14: A positive number
 
-            System.out.println("Top ten by points");
-            NHLStatistics.sortByPoints();
-            NHLStatistics.top(10);
+        System.out.print("Type a number: ");
+        int num1 = Integer.parseInt(reader.nextLine());
+
+        if (num1 > 0) {
+            System.out.println("The number is positive.");
+        } else {
+            System.out.println("The number is not positive.");
+        }
     }
-}
+} 
