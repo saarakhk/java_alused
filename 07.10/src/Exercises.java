@@ -2,12 +2,14 @@ import java.util.Scanner;
 
 public class Exercises {
     public static void main(String[] args) {
-        int radius;
-        double circumference;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the radius of the circle: ");
-        radius = sc.nextInt();
-        circumference = Math.PI*2*radius;
-        System.out.println("Circumference of the circle is: " + circumference);
+        Scanner reader = new Scanner(System.in);
+        // Exercise 11: Bigger number
+        System.out.print("Type a number: ");
+        int num1 = Integer.parseInt(reader.nextLine());
+
+        System.out.print("Type another number: ");
+        int num2 = Integer.parseInt(reader.nextLine());
+
+        System.out.println("The bigger number of the two numbers given was: " + Math.max(num1,num2));
     }
 }
