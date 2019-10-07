@@ -3,13 +3,19 @@ import java.util.Scanner;
 public class Exercises {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        // Exercise 11: Bigger number
-        System.out.print("Type a number: ");
+        // Exercise 12: Sum of the ages
+        System.out.print("Type your name: ");
+        String name1 = reader.nextLine();
+        System.out.print("Type your age: ");
         int num1 = Integer.parseInt(reader.nextLine());
 
-        System.out.print("Type another number: ");
+        System.out.print("Type your name: ");
+        String name2 = reader.nextLine();
+        System.out.print("Type your age: ");
         int num2 = Integer.parseInt(reader.nextLine());
 
-        System.out.println("The bigger number of the two numbers given was: " + Math.max(num1,num2));
+        int theSum = num1 + num2;
+
+        System.out.println(name1 + " and " + name2 + " are " + theSum + " years old in total.");
     }
 }
