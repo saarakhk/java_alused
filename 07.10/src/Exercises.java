@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Exercises {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        // Ex8
+        // Ex9
         System.out.print("Type a number: ");
         int number1 = Integer.parseInt(reader.nextLine());
 
