@@ -4,23 +4,18 @@ public class Exercises {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
 
-        // Exercise 25: Sum of three numbers
+        // Exercise 26: Sum of many numbers
         int sum = 0;
-        int read;
 
-        System.out.println("Type a number: ");
-        read = Integer.parseInt(reader.nextLine());
-        sum = sum + read;
+        while (true) {
+            int read = Integer.parseInt(reader.nextLine());
+            if (read == 0) {
+                break;
+            }
+            sum += read;
 
-        System.out.println("Type second nr: ");
-        read = Integer.parseInt(reader.nextLine());
-        sum = sum + read;
-
-        System.out.println("Type third nr: ");
-        read = Integer.parseInt(reader.nextLine());
-        sum = sum + read;
-
-        System.out.println("Sum: " + sum);
-
+            System.out.println("Sum now: " + sum);
+        }
+        System.out.println("Sum in the end: " + sum);
     }
 }
