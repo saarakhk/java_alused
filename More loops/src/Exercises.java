@@ -4,16 +4,17 @@ public class Exercises {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
 
-        // Exercise 30: Up to a certain number
-        System.out.print("Up to what number? ");
-        int number = Integer.parseInt(reader.nextLine());
+        // Exercise 31: Lower limit and upper limit
+        System.out.print("First number: ");
+        int number1 = Integer.parseInt(reader.nextLine()); // 5
+        System.out.print("Second number: ");
+        int number2 = Integer.parseInt(reader.nextLine()); // 10
 
-        int number2 = 1;
 
-            while (number2 <= number) {
-                System.out.print(number2);
-                number2++;
 
+            while (number1 <= number2) {
+                System.out.print(number1);
+                number1++;
         }
     }
 }
