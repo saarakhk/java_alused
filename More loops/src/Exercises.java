@@ -4,12 +4,14 @@ public class Exercises {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
 
-        // Exercise 28: From hundred to one
-        int number = 100;
+        // Exercise 29: Even numbers
+        int number = 2;
 
-        while (number > 0) {
-            System.out.println(number);
-            number--;
+            while (number <= 100) {
+                if (number % 2 == 0) {
+                    System.out.println(number);
+                }
+                number++;
         }
     }
 }
