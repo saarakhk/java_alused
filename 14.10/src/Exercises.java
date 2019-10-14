@@ -3,15 +3,17 @@ import java.util.Scanner;
 public class Exercises {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        // Exercise 19: Age check
+        // Exercise 20: Usernames
 
-        System.out.print("How old are you?");
-        int number = Integer.parseInt(reader.nextLine());
+        System.out.print("What is your username? ");
+        String username = reader.nextLine();
+        System.out.print("What is your password? ");
+        String password = reader.nextLine();
 
-        if (number > 0 && number < 100) {
-            System.out.println("OK");
+        if (((username.equals("saara")) && password.equals("java")) || ((username.equals("admin")) && password.equals("pin"))) {
+            System.out.println("Oled sisselogitud");
         } else {
-            System.out.println("Impossible!");
+            System.out.println("Sellist kasutajat ei ole või on sul vale salasõna");
         }
 
     }
