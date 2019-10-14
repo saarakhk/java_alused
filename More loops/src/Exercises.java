@@ -4,12 +4,12 @@ public class Exercises {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
 
-        // Exercise 27: From one to a hundred
-        int number = 1;
+        // Exercise 28: From hundred to one
+        int number = 100;
 
-        while (number < 101) {
+        while (number > 0) {
             System.out.println(number);
-            number++;
+            number--;
         }
     }
 }
