@@ -4,16 +4,19 @@ public class Exercises {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
 
-    // Exercise 32: The sum of a set of numbers
-        System.out.print("Until what? "); // nt 3
-        int untilNumber = Integer.parseInt(reader.nextLine());
+    // Exercise 33: The sum between two numbers
 
-        int i = 0;
+        System.out.print("First number: "); // nt 3
+        int firstNumber = Integer.parseInt(reader.nextLine());
+        System.out.print("Second number: "); // nt 5
+        int secondNumber = Integer.parseInt(reader.nextLine());
+
+        // int i = 0;
         int sum = 0;
 
-        while (i < untilNumber) {
-            i++;  // means the same as i = i + 1;
-            sum = sum + i;
+        while (firstNumber <= secondNumber) {
+            sum = sum + firstNumber;
+            firstNumber++;
         }
         System.out.print(sum);
     }
