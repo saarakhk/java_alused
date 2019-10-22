@@ -4,21 +4,21 @@ public class Exercises {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
 
-    // Exercise 34: Factorial
+    // Exercise 35: Sum of the powers
+
+        int power, sum;
 
         System.out.print("Type a number: "); // nt 3
-        int num = Integer.parseInt(reader.nextLine());
+        power = Integer.parseInt(reader.nextLine());
 
-        int i = 1;
-        int factorial = 1;
+        int i = 0;
+        sum = 0;
 
-        while (i <= num) {
-            factorial *= i;
+        while (i <= power) {
+            sum += (int)Math.pow(2, i);
             i++;
         }
-        if (num == 0) {
-            factorial = 1;
-        }
-        System.out.println("Factorial is " + factorial);
+
+        System.out.println("The result is " + sum);
     }
 }
