@@ -4,20 +4,21 @@ public class Exercises {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
 
-    // Exercise 33: The sum between two numbers
+    // Exercise 34: Factorial
 
-        System.out.print("First number: "); // nt 3
-        int firstNumber = Integer.parseInt(reader.nextLine());
-        System.out.print("Second number: "); // nt 5
-        int secondNumber = Integer.parseInt(reader.nextLine());
+        System.out.print("Type a number: "); // nt 3
+        int num = Integer.parseInt(reader.nextLine());
 
-        // int i = 0;
-        int sum = 0;
+        int i = 1;
+        int factorial = 1;
 
-        while (firstNumber <= secondNumber) {
-            sum = sum + firstNumber;
-            firstNumber++;
+        while (i <= num) {
+            factorial *= i;
+            i++;
         }
-        System.out.print(sum);
+        if (num == 0) {
+            factorial = 1;
+        }
+        System.out.println("Factorial is " + factorial);
     }
 }
