@@ -5,26 +5,27 @@ import java.util.Scanner;
 
 public class Exercises {
     public static void main(String [] args) {
-        ArrayList<String> words = new ArrayList<String>();
-        Scanner reader = new Scanner(System.in);
-        String repeatedWord;
 
-        while (true) {
-            System.out.println("Type a word: ");
-            String word = reader.nextLine();
+        ArrayList<String> brothers = new ArrayList<String>();
+        brothers.add("Mandy");
+        brothers.add("Henry");
+        brothers.add("Michael");
+        brothers.add("Bob");
 
-            if (words.contains(word)) {
-                repeatedWord = word;
-                break;
-            }else {
-                words.add(word);
-            }
+        System.out.println("brothers:");
+        // sorting brothers
+        Collections.sort(brothers);
 
-        } // while ends
-        System.out.println("You cave the word " + repeatedWord + " twice.");
-        Collections.sort(words);
-        for (String word : words) {
-            System.out.println(word);
+        for (String bro : brothers) {
+            System.out.println(bro);
         }
+
+// removing the last item
+        System.out.println("Removed last brother:");
+        brothers.remove(brothers.size()-1);
+        for (String bro : brothers) {
+            System.out.println(bro);
+        }
+
     }
 }
