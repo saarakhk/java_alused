@@ -4,28 +4,24 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class Exercises {
-    public static void main(String [] args) {
+    public static void main (String [] args){
 
-        ArrayList<String> brothers = new ArrayList<String>();
-        brothers.add("Mandy");
-        brothers.add("Henry");
-        brothers.add("Michael");
-        brothers.add("Bob");
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(3);
+        list.add(2);
+        list.add(7);
+        list.add(2);
 
-        System.out.println("brothers:");
-        // sorting brothers
-        Collections.sort(brothers);
+        System.out.println("The average is: " + average(list));
+    }
+    public static double average (ArrayList<Integer> list){
+        double sum = 0;
+        for (double nr:list){
+            sum+=nr;
 
-        for (String bro : brothers) {
-            System.out.println(bro);
         }
+        double endSum = sum / list.size();
 
-// removing the last item
-        System.out.println("Removed last brother:");
-        brothers.remove(brothers.size()-1);
-        for (String bro : brothers) {
-            System.out.println(bro);
-        }
-
+        return endSum;
     }
 }
