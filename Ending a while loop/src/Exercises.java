@@ -4,25 +4,35 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class Exercises {
-    public static void main(String[] args) {
 
-        ArrayList<Integer> list = new ArrayList<Integer>();
-        list.add(3);
-        list.add(2);
-        list.add(7);
-        list.add(2);
+        public static void main (String [] args){
+            Scanner reader = new Scanner(System.in);
 
-
-
-        System.out.println("The greatest number is: " + greatest(list));
-        for (int nr : list){
-            System.out.println(nr);
+            System.out.println("Type a text: ");
+            String text = reader.nextLine();
+            //System.out.println(reverse(text));
+            if (palindrome(text)) {
+                System.out.println("The text is a palindrome!");
+            } else {
+                System.out.println("The text is not a palindrome!");
+            }
         }
+        public static boolean palindrome(String text){
 
-    }
+            if (text.contains(reverse(text))){
+                return true;
+            }
+            return false;
+        }
+        public static String reverse(String text) {
+            String help = "";
+            int i = text.length()-1;
+            while (i >= 0){
+                help +=text.charAt(i);
+                //System.out.print(text.charAt(i));
+                i--;
+            }
+            return help;
 
-    public static int greatest(ArrayList<Integer> list) {
-        Collections.sort(list);
-        return list.get(list.size()-1);
-    }
+        }
 }
