@@ -4,28 +4,23 @@ import java.util.Scanner;
 public class Exercises {
     public static void main(String [] args) {
         Scanner reader = new Scanner(System.in);
-        System.out.println("Hei, type here your name: ");
-        String name = reader.nextLine();
-        System.out.println("name lenght: "+ name.length());
-        // reversing the name
-        int i = name.length()-1;
+        System.out.println("Write a  first word: ");
+        String first = reader.nextLine();
+        System.out.println("How about a another word:");
+        String second = reader.nextLine();
 
+        int secLeng = second.length();
 
+        int index = first.indexOf(second);
+        System.out.println(index);
 
-        if (name.length() <= 2) {
-            System.out.println("Uuf such a short name.");
-
-        } else {
-            System.out.println("1. character: "+ name.charAt(0));
-            System.out.println("2. character: "+ name.charAt(1));
-            System.out.println("3. character: "+ name.charAt(2));
-            System.out.println("In reverse order: ");
-            while (i >= 0){
-                System.out.print(name.charAt(i));
-                i--;
-            }
+        if (index == -1 ) {
+            System.out.println("The word '" + second + "' is not found in the word '" + first + "'.");
+        }else {
+            System.out.println("The word '" + second + "' is found in the word '" + first + "'.");
         }
 
-    }
 
+
+    }
 }
