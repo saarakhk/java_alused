@@ -5,34 +5,33 @@ import java.util.Scanner;
 
 public class Exercises {
 
-        public static void main (String [] args){
-            Scanner reader = new Scanner(System.in);
+    public static void main(String[] args){
+        ArrayList<Integer> list1 = new ArrayList<Integer>();
+        ArrayList<Integer> list2 = new ArrayList<Integer>();
 
-            System.out.println("Type a text: ");
-            String text = reader.nextLine();
-            //System.out.println(reverse(text));
-            if (palindrome(text)) {
-                System.out.println("The text is a palindrome!");
-            } else {
-                System.out.println("The text is not a palindrome!");
+        list1.add(4);
+        list1.add(3);
+
+        list2.add(5);
+        list2.add(10);
+        list2.add(4);
+        smartCombine(list1, list2);
+
+        System.out.println(list1);
+    }
+
+    public static void smartCombine(ArrayList<Integer> first, ArrayList<Integer> second){
+        int i=0;
+        while (i< second.size()){
+            i++;
+            for (int nr : second) {
+                if (first.contains(nr)){
+                    continue;
+                }else {
+                    first.add(nr);
+                }
             }
         }
-        public static boolean palindrome(String text){
 
-            if (text.contains(reverse(text))){
-                return true;
-            }
-            return false;
-        }
-        public static String reverse(String text) {
-            String help = "";
-            int i = text.length()-1;
-            while (i >= 0){
-                help +=text.charAt(i);
-                //System.out.print(text.charAt(i));
-                i--;
-            }
-            return help;
-
-        }
+    }
 }
